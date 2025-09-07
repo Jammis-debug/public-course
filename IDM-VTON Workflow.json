@@ -1,0 +1,851 @@
+{
+  "id": "d5f0cdc3-3dfb-419b-a24d-52b36799a307",
+  "revision": 0,
+  "last_node_id": 17,
+  "last_link_id": 15,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "PreviewImage",
+      "pos": [
+        2030.382080078125,
+        -557.3355102539062
+      ],
+      "size": [
+        295.53216552734375,
+        272.4537048339844
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "PipelineLoader",
+      "pos": [
+        2036.5865478515625,
+        -680.7621459960938
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "PIPELINE",
+          "type": "PIPELINE",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-idm-vton",
+        "ver": "1.0.1",
+        "Node name for S&R": "PipelineLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "weight_dtype": true
+          }
+        }
+      },
+      "widgets_values": [
+        "float16"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "MaskToImage",
+      "pos": [
+        1713.55126953125,
+        -420.31768798828125
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6,
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "PreviewImage",
+      "pos": [
+        2031.55859375,
+        -84.12838745117188
+      ],
+      "size": [
+        278.5421142578125,
+        318.4235534667969
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        2930.97705078125,
+        -310.4289245605469
+      ],
+      "size": [
+        449.7911071777344,
+        457.5671691894531
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          }
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "SAMModelLoader (segment anything)",
+      "pos": [
+        787.808837890625,
+        -345.3950500488281
+      ],
+      "size": [
+        335.6919860839844,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "SAMModelLoader (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_name": true
+          }
+        }
+      },
+      "widgets_values": [
+        "sam_hq_vit_h (2.57GB)"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        407.870849609375,
+        -654.0513916015625
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            4,
+            9
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Load Image of Fashion Model",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "ManWithAPlan in blue t-shirt.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "PrimitiveNode",
+      "pos": [
+        421.8646240234375,
+        -272.14971923828125
+      ],
+      "size": [
+        270.8874816894531,
+        112.59182739257812
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "The Old Garments (in Original Image)",
+      "properties": {
+        "Run widget replace on values": false,
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "t-shirt"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        -74.06430053710938,
+        -279.7705078125
+      ],
+      "size": [
+        479.9239807128906,
+        122.39476013183594
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Garment You Want To Replace",
+      "properties": {},
+      "widgets_values": [
+        "Provide a short word that captures the clothing you want to cut out of the original photo (not the new garment you’re swapping in). \n\nExample: \nTops: \"t-shirt\", \"shirt\", \"blouse\", \"sweater\", \"hoodie\", \"jacket\", \"coat\"\nBottoms: \"pants\", \"jeans\", \"shorts\", \"skirt\", \"leggings\"\nOne-piece garments: \"dress\", \"gown\", \"jumpsuit\"\nFootwear: \"shoes\", \"sneakers\", \"boots\", \"heels\"\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 17,
+      "type": "Note",
+      "pos": [
+        -72.43009948730469,
+        -60.64310073852539
+      ],
+      "size": [
+        479.45318603515625,
+        171.902099609375
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "The New Garments",
+      "properties": {},
+      "widgets_values": [
+        "The garment_description is where you actually describe the replacement garment you want the model to synthesize in context.\n\nExamples:\n\"a white cotton v-neck t-shirt\", \"a black leather jacket with zippers\", \"a red floral summer dress\"\n\nGuidelines for writing garment_description:\n- Use short, clear fashion phrases (color + fabric/style + garment type).\n- Don’t overload with too much detail; 2–4 attributes is usually ideal.\n- Always include the category word (shirt, dress, pants) so IDM-VTON knows the garment type."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "GroundingDinoModelLoader (segment anything)",
+      "pos": [
+        786.8489379882812,
+        -175.54110717773438
+      ],
+      "size": [
+        399.5259704589844,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "GROUNDING_DINO_MODEL",
+          "type": "GROUNDING_DINO_MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "GroundingDinoModelLoader (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_name": true
+          }
+        }
+      },
+      "widgets_values": [
+        "GroundingDINO_SwinB (938MB)"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "DensePosePreprocessor",
+      "pos": [
+        1192.1754150390625,
+        -19.935123443603516
+      ],
+      "size": [
+        390.7530822753906,
+        129.56515502929688
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "59b027e088c1c8facf7258f6e392d16d204b4d27",
+        "Node name for S&R": "DensePosePreprocessor",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model": true,
+            "cmap": true,
+            "resolution": true
+          }
+        }
+      },
+      "widgets_values": [
+        "densepose_r101_fpn_dl.torchscript",
+        "Parula (CivitAI)",
+        1024
+      ]
+    },
+    {
+      "id": 5,
+      "type": "GroundingDinoSAMSegment (segment anything)",
+      "pos": [
+        1233.87255859375,
+        -343.8983154296875
+      ],
+      "size": [
+        404.1744079589844,
+        122
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 1
+        },
+        {
+          "name": "grounding_dino_model",
+          "type": "GROUNDING_DINO_MODEL",
+          "link": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "GroundingDinoSAMSegment (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "threshold": true
+          }
+        }
+      },
+      "widgets_values": [
+        "t-shirt",
+        0.30000000000000004
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        432.4766845703125,
+        191.24131774902344
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Load Image of Garment",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "shirt_nobackground.webp",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "IDM-VTON",
+      "pos": [
+        2413.063232421875,
+        -288.1319885253906
+      ],
+      "size": [
+        400,
+        390
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipeline",
+          "type": "PIPELINE",
+          "link": 7
+        },
+        {
+          "name": "human_img",
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "name": "pose_img",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "mask_img",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "garment_img",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "garment_description",
+          "type": "STRING",
+          "widget": {
+            "name": "garment_description"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-idm-vton",
+        "ver": "1.0.1",
+        "Node name for S&R": "IDM-VTON",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "garment_description": true,
+            "negative_prompt": true,
+            "width": true,
+            "height": true,
+            "num_inference_steps": true,
+            "guidance_scale": true,
+            "strength": true,
+            "seed": true
+          }
+        }
+      },
+      "widgets_values": [
+        "black t-shirt with a olds cool brand on the chest",
+        "lowres, bad quality\n",
+        1024,
+        1024,
+        30,
+        2,
+        1,
+        736944402507684,
+        "randomize"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "PrimitiveNode",
+      "pos": [
+        428.10040283203125,
+        -67.88489532470703
+      ],
+      "size": [
+        270.8464050292969,
+        187.276123046875
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "garment_description"
+          },
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "The New Clothing (in New Image)",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "black t-shirt with a olds cool brand on the chest"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      5,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      2,
+      3,
+      0,
+      5,
+      1,
+      "GROUNDING_DINO_MODEL"
+    ],
+    [
+      3,
+      4,
+      0,
+      5,
+      2,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      5,
+      1,
+      8,
+      0,
+      "MASK"
+    ],
+    [
+      6,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      10,
+      0,
+      11,
+      0,
+      "PIPELINE"
+    ],
+    [
+      8,
+      8,
+      0,
+      11,
+      3,
+      "IMAGE"
+    ],
+    [
+      9,
+      4,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      10,
+      7,
+      0,
+      11,
+      4,
+      "IMAGE"
+    ],
+    [
+      11,
+      6,
+      0,
+      11,
+      2,
+      "IMAGE"
+    ],
+    [
+      12,
+      6,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      11,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      14,
+      0,
+      5,
+      3,
+      "STRING"
+    ],
+    [
+      15,
+      16,
+      0,
+      11,
+      5,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Input Data",
+      "bounding": [
+        -165.25765991210938,
+        -772.4059448242188,
+        895.4728393554688,
+        1316.85791015625
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.3991172938544635,
+      "offset": [
+        246.8799961258718,
+        916.3543342372412
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
