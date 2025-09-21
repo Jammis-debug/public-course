@@ -1,0 +1,3421 @@
+{
+  "id": "ce5d198d-b63b-4518-91c0-e224d61856b1",
+  "revision": 0,
+  "last_node_id": 148,
+  "last_link_id": 217,
+  "nodes": [
+    {
+      "id": 93,
+      "type": "Combine Masks",
+      "pos": [
+        531.5491943359375,
+        -685.0733642578125
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 140
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 141
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "intersection (min)",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "Combine Masks",
+      "pos": [
+        234.9121551513672,
+        -690.5393676757812
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 137
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            136,
+            146
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "difference",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "Combine Masks",
+      "pos": [
+        1148.2037353515625,
+        -693.4908447265625
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 145
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            147
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "add",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "PreviewImage",
+      "pos": [
+        265.1676940917969,
+        -508.5172424316406
+      ],
+      "size": [
+        266.8941345214844,
+        258
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 136
+        }
+      ],
+      "outputs": [],
+      "title": "What’s protected that I didn’t intend?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 96,
+      "type": "Note",
+      "pos": [
+        1159.8975830078125,
+        -204.5299835205078
+      ],
+      "size": [
+        268.08465576171875,
+        194.64146423339844
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "You want a thin, polite outline—enough to show boundaries without shouting. Thick bands mean sharp transitions or misalignment; add a modest feather to the active side (usually Paint), then re-threshold so the mask is decisive again. If XOR looks fine yet renders still halo, feed the sampler the Paint-only result from Test 1, clamp denoise/CFG if applicable, and ensure “only masked” behavior is enabled in your inpaint node."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 61,
+      "type": "Note",
+      "pos": [
+        271.31231689453125,
+        -204.45721435546875
+      ],
+      "size": [
+        255.52830505371094,
+        198.1298828125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "You should see white only where you intend to lock pixels. If white spills into your intended repaint area, you’ve mislabeled or inverted something—either invert Protect or explicitly subtract Paint from it upstream and use that cleaner Protect. If the whole frame goes white, Protect is blown out; invert or re-author it and re-threshold so it behaves."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 99,
+      "type": "PreviewImage",
+      "pos": [
+        574.9825439453125,
+        -508.3533630371094
+      ],
+      "size": [
+        224.33358764648438,
+        258
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 149
+        }
+      ],
+      "outputs": [],
+      "title": "Do Paint and Protect conflict?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 54,
+      "type": "PreviewImage",
+      "pos": [
+        -34.31669998168945,
+        -509.4565124511719
+      ],
+      "size": [
+        245.61204528808594,
+        265.2635192871094
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 135
+        }
+      ],
+      "outputs": [],
+      "title": "Is Protect eating my Paint?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": [
+        -33.450523376464844,
+        -207.30905151367188
+      ],
+      "size": [
+        255.20474243164062,
+        195.76220703125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "When you subtract Protect from Paint, the result should be a clean white region exactly where you want inpainting to happen, with crisp edges and no stray islands. If it’s mostly black, Protect is eating Paint—shrink or erode Protect a bit, or check whether Paint is inverted. Speckle means your masks are soft; threshold them to binary before differencing. Jagged borders usually signal a size or alignment mismatch: resample both masks to the same resolution as the image/latents and try again."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 94,
+      "type": "Combine Masks",
+      "pos": [
+        847.7402954101562,
+        -696.2357788085938
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 143
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 144
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            142
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "union (max)",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "Note",
+      "pos": [
+        576.70654296875,
+        -205.3335723876953
+      ],
+      "size": [
+        231.99522399902344,
+        193.58131408691406
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "Ideally it’s pure black; any white means Paint and Protect are fighting over the same pixels. Thin white halos along edges mean Protect hugs Paint too tightly—erode Protect a touch (or dilate Paint slightly, then re-threshold). Big white blobs mean your concepts of Paint and Protect disagree; decide who wins and subtract the loser in those zones."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 70,
+      "type": "Note",
+      "pos": [
+        864.0936279296875,
+        -204.39805603027344
+      ],
+      "size": [
+        250.23170471191406,
+        194.59799194335938
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "Your two masks should work like stage directions. Paint is the spotlight—the area the model may change. Protect is the shadow—the area the model must not touch. When combined, they should form a single, clean, continuous silhouette of the regions your workflow cares about—no gaps, no accidental holes, and no places where Paint and Protect fight over the same pixels."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 49,
+      "type": "Note",
+      "pos": [
+        -2349.337158203125,
+        -1283.517333984375
+      ],
+      "size": [
+        564.45703125,
+        1160.6572265625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "The logic of this workflow",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "Think of the workflow as a careful scene change in a theater: we rebuild the set behind the actor without touching the actor.\n\nFirst, the system figures out who/what to protect. A person mask is carved out (with Segment Anything + GroundingDINO), then flipped so the editable area becomes the background, and softened so the transition won’t look like a razor cut. In node terms, that’s your GroundingDinoSAMSegment producing the mask, an InvertMask to target the surroundings, and a MaskBlur+ to make the edge forgiving.\n\nNext, the image is packed into a latent “workbench” only where editing is allowed. VAEEncodeForInpaint takes your pixels plus that softened background mask, along with the VAE, and prepares a latent that’s editable inside the mask and stable outside it. This is what lets the model rebuild scenery behind the subject rather than smudging the subject itself.\n\nThen comes the what to paint. You load the HiDream backbone with UNETLoader (hidream_i1_full_fp16) and its matching decoder with VAELoader (FLUX1/ae.safetensors), and you feed the model richer language about the scene through QuadrupleCLIPLoader into text-encode nodes. That “multi-encoder” conditioning gives the model a strong sense of how the background should look and feel before it starts generating.\nThe sampler now synthesizes a fresh background only in the editable zone: the latent from VAEEncodeForInpaint flows into the sampler alongside the model and your text conditioning. That path is explicit in your graph—VAEEncodeForInpaint → KSampler—so you’re generating new environment where the subject used to be, not everywhere.\nTo guarantee the subject stays pristine, there’s a second lane in parallel: the original image is encoded once with VAEEncode, and at the end a LatentCompositeMasked pastes the protected person back on top of the newly painted background. It’s aligned one-to-one (no shifting), and it uses a person-only mask so arms, hair, and edges return exactly as they were. Finally, the composite latent is decoded to pixels and passed through your scaling/output nodes.\n\nPhilosophically, the graph is opinionated:\n\n- Edit the world, not the person. Define a truthful background region and rebuild it from scratch so it feels like it was always there. The subject is restored after the fact, in latent space, so no bleed or tint sneaks in.\n\n- Speak the model’s language. Use HiDream’s UNet, Flux’s VAE, and the quadruple text encoders so guidance is rich and decoding matches what the model expects.\n\n- Blend, don’t butt up. Softening the boundary before inpainting makes the new background glide under the subject’s edges instead of colliding with them.\n\n- All of this is packaged in your “Background Inpainting — SDXL-Inpainting” group, so it runs as a single, purposeful pass: identify the safe edit zone, regenerate the scene within it, and restore the subject perfectly on top.\n\n\nThe Paint and Protect masks play different roles, so they should be shaped and softened differently. Paint defines where the model is allowed to make changes; it works best when it extends just a little beyond the true edit area and has a slight feather so diffusion can blend new pixels into the old without leaving a hard seam. Protect marks the places the model must not touch; it should be nudged back a few pixels from the Paint edge and kept crisper so it never collides with Paint. In practice, this means a gently expanded, lightly blurred Paint mask and a slightly eroded, minimally blurred Protect mask. \n\nMaskBlur simply softens a mask’s edges by applying a blur, turning a hard boundary into a gradual transition. You feed it a mask and get the same-sized mask back, just smoother. Its radius (or amount) is in pixels: small values around 1–2 act like anti-aliasing that tidies jaggies without changing shape much—ideal for Protect—while moderate values around 2–4 create a gentle ramp that helps Paint blend cleanly. Large radii beyond about 5–6 make very soft edges that can cause halos unless you threshold afterward. If your inpaint node supports soft masks, you can keep Paint slightly blurred for smoother blends and keep Protect relatively crisp so the two never overlap.\n\n\n\n\nMany images behave well with Paint dilated by roughly 2–4 pixels and blurred 2–4, while Protect is eroded 3–6 pixels with only 1–2 pixels of blur; if you need strict on/off logic later, threshold both back to 0/1."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 90,
+      "type": "Combine Masks",
+      "pos": [
+        -62.76974105834961,
+        -700.944091796875
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 133
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            135,
+            145
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "difference",
+        "yes",
+        "yes"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "GetMaskSizeAndCount",
+      "pos": [
+        -621.5663452148438,
+        592.25927734375
+      ],
+      "size": [
+        185.40292358398438,
+        86
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "1590 width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            156
+          ]
+        },
+        {
+          "label": "1598 height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            157
+          ]
+        },
+        {
+          "label": "1 count",
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.3",
+        "Node name for S&R": "GetMaskSizeAndCount",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 106,
+      "type": "easy showAnything",
+      "pos": [
+        -409.2324523925781,
+        596.877685546875
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 156
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1590"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "easy showAnything",
+      "pos": [
+        -180.37274169921875,
+        594.4362182617188
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1598"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "GetMaskSizeAndCount",
+      "pos": [
+        -621.9417724609375,
+        450.58392333984375
+      ],
+      "size": [
+        185.40292358398438,
+        86
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "1590 width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            154
+          ]
+        },
+        {
+          "label": "1598 height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            155
+          ]
+        },
+        {
+          "label": "1 count",
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.3",
+        "Node name for S&R": "GetMaskSizeAndCount",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 104,
+      "type": "easy showAnything",
+      "pos": [
+        -413.37200927734375,
+        447.138671875
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1590"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "easy showAnything",
+      "pos": [
+        -183.39613342285156,
+        451.2464904785156
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1598"
+      ]
+    },
+    {
+      "id": 113,
+      "type": "MaskToImage",
+      "pos": [
+        -1675.1864013671875,
+        285.5157775878906
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 165
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            163
+          ]
+        }
+      ],
+      "title": "LOGIC PROTECT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 112,
+      "type": "MaskToImage",
+      "pos": [
+        -1667.2001953125,
+        210.31260681152344
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ]
+        }
+      ],
+      "title": "BLURRED PAINT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 110,
+      "type": "Combine Masks",
+      "pos": [
+        -1454.4549560546875,
+        209.17056274414062
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 162
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            166
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Combine Masks",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "op": true,
+            "clamp_result": true,
+            "round_result": true
+          }
+        }
+      },
+      "widgets_values": [
+        "difference",
+        "yes",
+        "no"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "InvertMask",
+      "pos": [
+        -858.962646484375,
+        -61.17675018310547
+      ],
+      "size": [
+        140,
+        26
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "InvertMask",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 53,
+      "type": "MaskToImage",
+      "pos": [
+        -306.88555908203125,
+        -175.9798583984375
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            133,
+            138,
+            140,
+            143
+          ]
+        }
+      ],
+      "title": "PAINT MASK",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 91,
+      "type": "MaskToImage",
+      "pos": [
+        -303.6217956542969,
+        -310.38653564453125
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            134,
+            137,
+            141,
+            144
+          ]
+        }
+      ],
+      "title": "PROTECT MASK",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 115,
+      "type": "GetMaskSizeAndCount",
+      "pos": [
+        -620.005615234375,
+        316.36724853515625
+      ],
+      "size": [
+        185.40292358398438,
+        86
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "1590 width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            171
+          ]
+        },
+        {
+          "label": "1598 height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            172
+          ]
+        },
+        {
+          "label": "1 count",
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.3",
+        "Node name for S&R": "GetMaskSizeAndCount",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 118,
+      "type": "easy showAnything",
+      "pos": [
+        -415.685791015625,
+        309.0428161621094
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 171
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1590"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "easy showAnything",
+      "pos": [
+        -411.2920837402344,
+        165.14874267578125
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 174
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1590"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "easy showAnything",
+      "pos": [
+        -183.01815795898438,
+        308.13677978515625
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1598"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "easy showAnything",
+      "pos": [
+        -181.72352600097656,
+        155.05677795410156
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "34882bca101fdc6b0a4697cf60e27b18bf88dcb0",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "1598"
+      ]
+    },
+    {
+      "id": 120,
+      "type": "GetMaskSizeAndCount",
+      "pos": [
+        -617.5484008789062,
+        164.82806396484375
+      ],
+      "size": [
+        185.40292358398438,
+        86
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "1590 width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            174
+          ]
+        },
+        {
+          "label": "1598 height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            175
+          ]
+        },
+        {
+          "label": "1 count",
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.3",
+        "Node name for S&R": "GetMaskSizeAndCount",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 73,
+      "type": "Note",
+      "pos": [
+        123.3314437866211,
+        142.31536865234375
+      ],
+      "size": [
+        210,
+        175.5696258544922
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "Your fashion model should be black, and everything else white."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 29,
+      "type": "SAMModelLoader (segment anything)",
+      "pos": [
+        -1742.180419921875,
+        -778.5989990234375
+      ],
+      "size": [
+        335.6919860839844,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "SAMModelLoader (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_name": true
+          }
+        }
+      },
+      "widgets_values": [
+        "sam_vit_h (2.56GB)"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "GroundingDinoSAMSegment (segment anything)",
+      "pos": [
+        -1648.3052978515625,
+        -478.4084777832031
+      ],
+      "size": [
+        404.1744079589844,
+        122
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 37
+        },
+        {
+          "name": "grounding_dino_model",
+          "type": "GROUNDING_DINO_MODEL",
+          "link": 36
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            38,
+            150,
+            160
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "GroundingDinoSAMSegment (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "threshold": true
+          }
+        }
+      },
+      "widgets_values": [
+        "person",
+        0.5000000000000001
+      ]
+    },
+    {
+      "id": 28,
+      "type": "GroundingDinoModelLoader (segment anything)",
+      "pos": [
+        -1740.669189453125,
+        -676.6822509765625
+      ],
+      "size": [
+        399.5259704589844,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "GROUNDING_DINO_MODEL",
+          "type": "GROUNDING_DINO_MODEL",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_segment_anything",
+        "ver": "ab6395596399d5048639cdab7e44ec9fae857a93",
+        "Node name for S&R": "GroundingDinoModelLoader (segment anything)",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_name": true
+          }
+        }
+      },
+      "widgets_values": [
+        "GroundingDINO_SwinT_OGC (694MB)"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "Note",
+      "pos": [
+        -1201.0177001953125,
+        -202.86227416992188
+      ],
+      "size": [
+        304.35321044921875,
+        231.60829162597656
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "What it does: expands the paste-back mask outward by 1 pixel.\nPurpose: makes sure the subject slightly over-covers the seam when pasted back onto the new background. If you didn’t do this, tiny misalignments or blur edges would leave a visible halo. With +1 dilation and light blur (node 109, value = 2), the subject overlaps the join cleanly.\nThink of it as: “give the subject a small cushion so the edge is hidden on paste-back.”"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 123,
+      "type": "Note",
+      "pos": [
+        -1204.403076171875,
+        -684.8285522460938
+      ],
+      "size": [
+        317.72857666015625,
+        164.87808227539062
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "What it does: expands the Paint mask outward by 2 pixels.\nPurpose: gives the model a little breathing room just outside the true edit zone, so diffusion has context to blend the new background under the subject edge. Without this, the model butts changes right up against the Protect mask and seams are more likely.\nThink of it as: “push Paint out slightly so the new background tucks in under the subject.”"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 124,
+      "type": "Note",
+      "pos": [
+        -1198.187744140625,
+        -461.25457763671875
+      ],
+      "size": [
+        306.480712890625,
+        195.07254028320312
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "Purpose: prevents Protect from overlapping Paint. If Protect hugs too tightly, you get overlap (white halos in your intersection test). By shrinking Protect, you carve out a no-conflict zone, ensuring the model doesn’t get contradictory guidance (“paint here” vs “don’t paint here”).\nThink of it as: “pull Protect back a little so it doesn’t collide with Paint.”"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 66,
+      "type": "PreviewImage",
+      "pos": [
+        355.5320739746094,
+        69.10924530029297
+      ],
+      "size": [
+        210,
+        258
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 90
+        }
+      ],
+      "outputs": [],
+      "title": "INVERTED MASK",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 67,
+      "type": "MaskToImage",
+      "pos": [
+        139.8939971923828,
+        73.59229278564453
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 114,
+      "type": "Image To Mask",
+      "pos": [
+        -1156.338134765625,
+        211.62890625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            173,
+            177,
+            186
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "masquerade-nodes-comfyui",
+        "ver": "432cb4d146a391b387a0cd25ace824328b5b61cf",
+        "Node name for S&R": "Image To Mask",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "method": true
+          }
+        }
+      },
+      "widgets_values": [
+        "intensity"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "PreviewImage",
+      "pos": [
+        -1104.4947509765625,
+        430.2444152832031
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 178
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 126,
+      "type": "MaskToImage",
+      "pos": [
+        -1109.076171875,
+        357.41754150390625
+      ],
+      "size": [
+        184.62362670898438,
+        26
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 177
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "MaskToImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 132,
+      "type": "DifferentialDiffusionCustom",
+      "pos": [
+        -340.1478271484375,
+        -1219.3577880859375
+      ],
+      "size": [
+        255.66268920898438,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DifferentialDiffusionCustom",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 128,
+      "type": "SetLatentNoiseMask",
+      "pos": [
+        -45.3304557800293,
+        -1220.1009521484375
+      ],
+      "size": [
+        180.74765014648438,
+        46
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "SetLatentNoiseMask",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        -1747.5048828125,
+        -1260.033203125
+      ],
+      "size": [
+        298.8480224609375,
+        394.4384460449219
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            35,
+            187,
+            193
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "example 2 image workflow.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": [
+        -31.902435302734375,
+        -1056.182861328125
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 190
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 54
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            192
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 134,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        219.23692321777344,
+        -1227.3597412109375
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 192
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 193
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            195
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "ImageCompositeMasked",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "x": true,
+            "y": true,
+            "resize_source": true
+          }
+        }
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 109,
+      "type": "MaskBlur+",
+      "pos": [
+        -410.4333801269531,
+        -650.1463623046875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            176,
+            194
+          ]
+        }
+      ],
+      "title": "🔧 Mask Blur (PROTECT MASK)",
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "1.1.0",
+        "Node name for S&R": "MaskBlur+",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "amount": true,
+            "device": true
+          }
+        }
+      },
+      "widgets_values": [
+        2,
+        "auto"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 34,
+      "type": "SaveImage",
+      "pos": [
+        1007.28076171875,
+        -1284.0205078125
+      ],
+      "size": [
+        508.4417419433594,
+        542.3682250976562
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "InpaintedImage"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "ImpactDilateMask",
+      "pos": [
+        -703.1491088867188,
+        -632.5955810546875
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            159
+          ]
+        }
+      ],
+      "title": "Increase Mask",
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "e22f68fb97115b24ddf35d3d8801cc99fdb8af8d",
+        "Node name for S&R": "ImpactDilateMask",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "dilation": true
+          }
+        }
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 41,
+      "type": "ImpactDilateMask",
+      "pos": [
+        -684.2701416015625,
+        -77.71416473388672
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "e22f68fb97115b24ddf35d3d8801cc99fdb8af8d",
+        "Node name for S&R": "ImpactDilateMask",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "dilation": true
+          }
+        }
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 45,
+      "type": "MaskBlur+",
+      "pos": [
+        -390.1060485839844,
+        -434.2630920410156
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            132,
+            153,
+            165
+          ]
+        }
+      ],
+      "title": "🔧 Mask Blur (PROTECT MASK)",
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "1.1.0",
+        "Node name for S&R": "MaskBlur+",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "amount": true,
+            "device": true
+          }
+        }
+      },
+      "widgets_values": [
+        3,
+        "auto"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 23,
+      "type": "MaskBlur+",
+      "pos": [
+        -381.10687255859375,
+        -88.45040130615234
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            91,
+            131,
+            152,
+            164
+          ]
+        }
+      ],
+      "title": "🔧 Mask Blur (PAINT MASK)",
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "1.1.0",
+        "Node name for S&R": "MaskBlur+",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "amount": true,
+            "device": true
+          }
+        }
+      },
+      "widgets_values": [
+        4,
+        "auto"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 100,
+      "type": "ImpactDilateMask",
+      "pos": [
+        -700.6818237304688,
+        -405.0705871582031
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            158
+          ]
+        }
+      ],
+      "title": "Erode Mask",
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "e22f68fb97115b24ddf35d3d8801cc99fdb8af8d",
+        "Node name for S&R": "ImpactDilateMask",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "dilation": true
+          }
+        }
+      },
+      "widgets_values": [
+        -5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        -615.3287353515625,
+        -951.8790283203125
+      ],
+      "size": [
+        220,
+        118
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 187
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 185
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 186
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "VAEEncodeForInpaint",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 33,
+      "type": "ImageScale",
+      "pos": [
+        573.9536743164062,
+        -1255.986328125
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "ImageScale",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "upscale_method": true,
+            "width": true,
+            "height": true,
+            "crop": true
+          }
+        }
+      },
+      "widgets_values": [
+        "lanczos",
+        2048,
+        2048,
+        "disabled"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "PreviewImage",
+      "pos": [
+        1138.855224609375,
+        -509.4855041503906
+      ],
+      "size": [
+        362.0777282714844,
+        258
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [],
+      "title": "Where are the hard edges that might cause seams?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 69,
+      "type": "PreviewImage",
+      "pos": [
+        867.3135986328125,
+        -509.8480224609375
+      ],
+      "size": [
+        239.09237670898438,
+        258
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 142
+        }
+      ],
+      "outputs": [],
+      "title": "Am I covering what I think I am?",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 39,
+      "type": "UNETLoader",
+      "pos": [
+        -1404.933349609375,
+        -965.909423828125
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            189
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "unet_name": true,
+            "weight_dtype": true
+          }
+        }
+      },
+      "widgets_values": [
+        "hidream_i1_full_fp16.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "QuadrupleCLIPLoader",
+      "pos": [
+        -1402.756591796875,
+        -1243.9486083984375
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            71,
+            72
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "QuadrupleCLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "clip_name1": true,
+            "clip_name2": true,
+            "clip_name3": true,
+            "clip_name4": true
+          }
+        }
+      },
+      "widgets_values": [
+        "clip_l_hidream.safetensors",
+        "clip_g_hidream.safetensors",
+        "t5xxl_fp8_e4m3fn.safetensors",
+        "llama_3.1_8b_instruct_fp8_scaled.safetensors"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "CLIPTextEncodeFlux",
+      "pos": [
+        -1090.932373046875,
+        -1269.614501953125
+      ],
+      "size": [
+        437.810302734375,
+        233.05804443359375
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "CLIPTextEncodeFlux",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "clip_l": true,
+            "t5xxl": true,
+            "guidance": true
+          }
+        }
+      },
+      "widgets_values": [
+        "city sidewalk, lime brick façade, continuous lines, coherent vanishing point, window reflections, matched exposure, detailed textures, no subject",
+        "Photorealistic city sidewalk and lime brick façade; continuous pavement lines where the person was; reflections and lighting consistent with the photo; no new focal subject",
+        3.5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 37,
+      "type": "VAELoader",
+      "pos": [
+        -1402.0255126953125,
+        -1068.93701171875
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            54,
+            185
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "vae_name": true
+          }
+        }
+      },
+      "widgets_values": [
+        "FLUX1/ae.safetensors"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "CLIPTextEncodeFlux",
+      "pos": [
+        -1089.6142578125,
+        -995.2443237304688
+      ],
+      "size": [
+        430.8769226074219,
+        240.5139617919922
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            74
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "CLIPTextEncodeFlux",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "clip_l": true,
+            "t5xxl": true,
+            "guidance": true
+          }
+        }
+      },
+      "widgets_values": [
+        "people, person, silhouette, seam, halo, ghosting, mismatched edges, duplicates, watermark, text, logo, lowres, blurry, banding, noise, chromatic aberration",
+        "No people or silhouettes; avoid seams, halos, ghosting, mismatched edges; no duplicates, text, logos; no low-res blur, banding, or color fringing.",
+        3.5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "KSampler",
+      "pos": [
+        -363.5556335449219,
+        -1087.1434326171875
+      ],
+      "size": [
+        250,
+        262
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 189
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 73
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 74
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        1061918099669894,
+        "randomize",
+        31,
+        7,
+        "dpmpp_2m",
+        "karras",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      35,
+      1,
+      0,
+      27,
+      2,
+      "IMAGE"
+    ],
+    [
+      36,
+      28,
+      0,
+      27,
+      1,
+      "GROUNDING_DINO_MODEL"
+    ],
+    [
+      37,
+      29,
+      0,
+      27,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      38,
+      27,
+      1,
+      30,
+      0,
+      "MASK"
+    ],
+    [
+      45,
+      33,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      37,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      56,
+      30,
+      0,
+      41,
+      0,
+      "MASK"
+    ],
+    [
+      57,
+      41,
+      0,
+      23,
+      0,
+      "MASK"
+    ],
+    [
+      71,
+      38,
+      0,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      72,
+      38,
+      0,
+      51,
+      0,
+      "CLIP"
+    ],
+    [
+      73,
+      50,
+      0,
+      9,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      74,
+      51,
+      0,
+      9,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      90,
+      67,
+      0,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      23,
+      0,
+      67,
+      0,
+      "MASK"
+    ],
+    [
+      131,
+      23,
+      0,
+      53,
+      0,
+      "MASK"
+    ],
+    [
+      132,
+      45,
+      0,
+      91,
+      0,
+      "MASK"
+    ],
+    [
+      133,
+      53,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      134,
+      91,
+      0,
+      90,
+      1,
+      "IMAGE"
+    ],
+    [
+      135,
+      90,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      92,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      137,
+      91,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      138,
+      53,
+      0,
+      92,
+      1,
+      "IMAGE"
+    ],
+    [
+      140,
+      53,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      91,
+      0,
+      93,
+      1,
+      "IMAGE"
+    ],
+    [
+      142,
+      94,
+      0,
+      69,
+      0,
+      "IMAGE"
+    ],
+    [
+      143,
+      53,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      144,
+      91,
+      0,
+      94,
+      1,
+      "IMAGE"
+    ],
+    [
+      145,
+      90,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      146,
+      92,
+      0,
+      97,
+      1,
+      "IMAGE"
+    ],
+    [
+      147,
+      97,
+      0,
+      95,
+      0,
+      "IMAGE"
+    ],
+    [
+      149,
+      93,
+      0,
+      99,
+      0,
+      "IMAGE"
+    ],
+    [
+      150,
+      27,
+      1,
+      100,
+      0,
+      "MASK"
+    ],
+    [
+      152,
+      23,
+      0,
+      101,
+      0,
+      "MASK"
+    ],
+    [
+      153,
+      45,
+      0,
+      102,
+      0,
+      "MASK"
+    ],
+    [
+      154,
+      101,
+      1,
+      104,
+      0,
+      "*"
+    ],
+    [
+      155,
+      101,
+      2,
+      105,
+      0,
+      "*"
+    ],
+    [
+      156,
+      102,
+      1,
+      106,
+      0,
+      "*"
+    ],
+    [
+      157,
+      102,
+      2,
+      107,
+      0,
+      "*"
+    ],
+    [
+      158,
+      100,
+      0,
+      45,
+      0,
+      "MASK"
+    ],
+    [
+      159,
+      108,
+      0,
+      109,
+      0,
+      "MASK"
+    ],
+    [
+      160,
+      27,
+      1,
+      108,
+      0,
+      "MASK"
+    ],
+    [
+      162,
+      112,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      163,
+      113,
+      0,
+      110,
+      1,
+      "IMAGE"
+    ],
+    [
+      164,
+      23,
+      0,
+      112,
+      0,
+      "MASK"
+    ],
+    [
+      165,
+      45,
+      0,
+      113,
+      0,
+      "MASK"
+    ],
+    [
+      166,
+      110,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      171,
+      115,
+      1,
+      118,
+      0,
+      "*"
+    ],
+    [
+      172,
+      115,
+      2,
+      119,
+      0,
+      "*"
+    ],
+    [
+      173,
+      114,
+      0,
+      115,
+      0,
+      "MASK"
+    ],
+    [
+      174,
+      120,
+      1,
+      121,
+      0,
+      "*"
+    ],
+    [
+      175,
+      120,
+      2,
+      122,
+      0,
+      "*"
+    ],
+    [
+      176,
+      109,
+      0,
+      120,
+      0,
+      "MASK"
+    ],
+    [
+      177,
+      114,
+      0,
+      126,
+      0,
+      "MASK"
+    ],
+    [
+      178,
+      126,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      185,
+      37,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      186,
+      114,
+      0,
+      8,
+      2,
+      "MASK"
+    ],
+    [
+      187,
+      1,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      188,
+      8,
+      0,
+      9,
+      3,
+      "LATENT"
+    ],
+    [
+      189,
+      39,
+      0,
+      9,
+      0,
+      "MODEL"
+    ],
+    [
+      190,
+      9,
+      0,
+      10,
+      0,
+      "LATENT"
+    ],
+    [
+      192,
+      10,
+      0,
+      134,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      1,
+      0,
+      134,
+      1,
+      "IMAGE"
+    ],
+    [
+      194,
+      109,
+      0,
+      134,
+      2,
+      "MASK"
+    ],
+    [
+      195,
+      134,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Background Inpainting — SDXL-Inpainting",
+      "bounding": [
+        -1759.7811279296875,
+        -1321.12548828125,
+        3374.1474609375,
+        2031.587646484375
+      ],
+      "color": "#a2c6ff",
+      "font_size": 18,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "PAINT MASK",
+      "bounding": [
+        -875.2659301757812,
+        -228.5008087158203,
+        793.3111572265625,
+        256.1390686035156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "PROTECT MASK LOGIC",
+      "bounding": [
+        -875.505859375,
+        -490.59222412109375,
+        783.4017333984375,
+        221.1823272705078
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "PROTECT MASK",
+      "bounding": [
+        -870.1060791015625,
+        -713.5089111328125,
+        768.4229125976562,
+        191.06253051757812
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.2608876805984754,
+      "offset": [
+        3165.0308353807,
+        1468.4263243677833
+      ]
+    },
+    "frontendVersion": "1.25.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
