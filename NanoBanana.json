@@ -1,0 +1,322 @@
+{
+  "id": "1d34a69f-2401-40ae-a72a-ffd9c8834d6d",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "SaveImage",
+      "pos": [
+        284.9195556640625,
+        -252.77523803710938
+      ],
+      "size": [
+        451.32159423828125,
+        452.8789978027344
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          }
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -646.53173828125,
+        -320.0757141113281
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "CarloTheHero_start.png",
+        "image"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -897.4171142578125,
+        48.34373474121094
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "Screenshot 2025-09-22 at 11.11.33.png",
+        "image"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        -591.9864501953125,
+        48.880802154541016
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.59",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "Screenshot 2025-09-22 at 11.23.25.png",
+        "image"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "ComfyUI_NanoBanana",
+      "pos": [
+        -284.1309509277344,
+        -300.8817443847656
+      ],
+      "size": [
+        526.9586791992188,
+        636.2180786132812
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "reference_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "reference_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_images",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "operation_log",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ShmuelRonen/ComfyUI-NanoBanano",
+        "ver": "9eeb8f2411fd0ff08791bdf5e24eec347456c8b8",
+        "Node name for S&R": "ComfyUI_NanoBanana",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "operation": true,
+            "api_key": true,
+            "batch_count": true,
+            "temperature": true,
+            "quality": true,
+            "aspect_ratio": true,
+            "character_consistency": true,
+            "enable_safety": true
+          }
+        }
+      },
+      "widgets_values": [
+        "Use reference_image_1 for the model’s identity and body with head tilted to the right; use reference_image_2 to match the garment exactly (navy crewneck sweater with a white Fair Isle yoke, long sleeves, ribbed cuffs and hem, visible wool texture); use reference_image_3 white linen trousers.\nLifestyle fashion shot at a Spanish harbor (stone quay, moored sailboats, Mediterranean water), golden hour light. The model walks mid-stride toward camera, confident posture, relaxed hands, hair lightly wind-tossed, eyes just past lens. Background softly blurred; sweater pattern tack-sharp.\nCamera & lighting: Full-frame 45MP pro body, 85mm prime at f/2.0, 1/1000s, ISO 100, circular polarizer. Side sun for warm rim light; 120 cm softbox or silver reflector camera-left at −1 EV as key fill; subtle bounce from paving. White balance 5200–5400 K. Natural, filmic contrast; skin tones true.\nComposition & styling: Eye-level, rule-of-thirds, leading lines of the quay; shallow depth for creamy bokeh but crisp knit detail. Dark slim jeans and clean white sneakers; no outerwear; no logos.\nOutput: Ultra-realistic, photorealistic; 8K render, 3:2 aspect (provide an alternate 4:5 crop for editorial). Color grade in a subtle Portra-style palette; preserve navy hue and clean white yoke.\nNegative cues: No extra patterns, no hood, no brand marks, no crowds, no tourists, no harsh midday shadows, no motion blur, no HDR halos, no plastic skin, no over-saturation, no boats cutting through the subject, no rain.",
+        "generate",
+        "Replace_with_your_API_from_Google",
+        1,
+        0.4,
+        "high",
+        "1:1",
+        true,
+        true
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      5,
+      0,
+      1,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 1.0664818211241964,
+      "offset": [
+        646.2183783624333,
+        448.74345147028464
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.25.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
